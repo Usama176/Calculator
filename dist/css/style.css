@@ -1,0 +1,225 @@
+/* For switch function making CSS variables Root is same as* */
+
+
+/* :root {
+    --primary-color: #009688;
+    --header-color: #fff;
+    --body-color: #fbe9e7;
+    --foter-bg: #fff;
+    --footer-hover: #e5e5e5;
+    --font-color: #333;
+    --button-color: #e6e6e6;
+    --symbol-color: #ff7043;
+    --symbol-hover-color: #ff8a65;
+    --symbol-dark-color: #f4511e;
+    --slide-circle: #000
+} */
+
+
+/* This is condition */
+
+
+/* [data-theme="dark"] {
+    --primary-color: #333;
+    --header-color: #000;
+    --body-color: #fff;
+    --foter-bg: #000;
+    --footer-hover: #fff;
+    --font-color: #333;
+    --button-color: #e6e6e6;
+    --symbol-color: transparent;
+    --symbol-hover-color: #ff5722;
+    --symbol-dark-color: #f4511e;
+    --slide-circle: #fff
+} */
+
+
+/*To enable the toggle color changing function we have to give the variable names to the 
+insted of color names in the body I will give it later */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Starting Body */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: #6D214F;
+    /* Now for centering its inner div we have to give it : */
+    display: flex;
+    /* For horizontal alignment */
+    justify-content: center;
+    /* For vertical alignment */
+    align-items: center;
+}
+
+.calculator {
+    width: 300px;
+    height: 500px;
+    background: #ffffff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.274);
+    /* Now for inside divs we use Grid system */
+    display: grid;
+    grid-template-rows: 10% 30% auto;
+}
+
+.header {
+    border: none;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.body {
+    background: #f1f2f6;
+    padding: 20px;
+    text-align: right;
+    font-size: 20px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+.footer {
+    border: none;
+    border-radius: 0px 0px 30px 30px;
+    /* For inside divs i-e buttons we use Grid system */
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 250px;
+    border: none;
+    color: #333333;
+    font-size: 20px;
+    font-weight: normal;
+    transition: 0.4s all;
+}
+
+.footer div.symbol {
+    background: #ff771d;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer div.symbolEql {
+    background: #ff7707;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.footer div.symbolDot {
+    font-weight: bold;
+}
+
+
+/* Hover Effect */
+
+.footer div:hover {
+    background: rgb(230, 230, 230);
+    cursor: pointer;
+}
+
+.footer div.symbol:hover {
+    background: #fda862;
+}
+
+.footer div.symbolEql:hover {
+    background: #fda862;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* Now staring Slider Switch css */
+
+
+/* 
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch-wrapper em {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 16px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: var(--slide-circle);
+    content: "";
+    bottom: -5px;
+    height: 26px;
+    right: 25px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #66bb6a;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+} */
